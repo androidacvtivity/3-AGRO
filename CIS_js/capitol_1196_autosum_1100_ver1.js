@@ -1,4 +1,6 @@
 function sumCap1196_Rind1000() {
+    //Da adaugat o validare  inline - daca la id se introduce alt rand care nu corespunde randului implicita sa apara un mesaj - sub r
+    //rand ca nu este corect randdul - 
     var rowIDs_1000 = [
         { id: "113799", rind: "1000-1" },
         { id: "113719", rind: "1000-2" },
@@ -170,6 +172,33 @@ function sumCap1196_Rind1300() {
     $("#73_1196_113768_1300_8").val(sumCol8 !== 0.0 ? sumCol8.toFixed(1) : "").prop("readonly", true);
 }
 
+
+function sumCap1196_Rind1100() {
+    var staticRows_1100 = [
+        { id: "113831", rind: "1110" },
+        { id: "113832", rind: "1120" },
+        { id: "113833", rind: "1130" },
+        { id: "113769", rind: "1140" },
+        { id: "113717", rind: "1150" },
+        { id: "113641", rind: "1160" },
+        { id: "113620", rind: "1170" },
+        { id: "113684", rind: "1180" },
+        { id: "113685", rind: "1190" },
+        { id: "113834", rind: "1200" }
+    ];
+
+    var sumCol4 = 0.0,
+        sumCol5 = 0.0;
+
+    staticRows_1100.forEach(function (row) {
+        sumCol4 += parseFloat($("#73_1196_" + row.id + "_" + row.rind + "_4").val()) || 0.0;
+        sumCol5 += parseFloat($("#73_1196_" + row.id + "_" + row.rind + "_5").val()) || 0.0;
+    });
+
+    $("#73_1196_113830_1100_4").val(sumCol4 !== 0.0 ? sumCol4.toFixed(1) : "").prop("readonly", true);
+    $("#73_1196_113830_1100_5").val(sumCol5 !== 0.0 ? sumCol5.toFixed(1) : "").prop("readonly", true);
+}
+
 function sumCap1196_Rind1900() {
     var staticRows_1900 = [
         { id: "113835", rind: "1000" },
@@ -203,6 +232,7 @@ function sumCap1196_Rind1900() {
 function f_Capitol_1196() {
     sumCap1196_Rind1000();
     sumCap1196_Rind1300();
+    sumCap1196_Rind1100();
     sumCap1196_Rind1900();
 }
 
@@ -219,19 +249,6 @@ $(document).ready(function () {
 });
 
 
-//adauga autosuma pentru 73_1196_113830_1100_4 si 73_1196_113830_1100_5
-//pentru randurile statice 
 
-//113830	73	2000	1196	2015	1100
-113831	73	2000	1196	2015	1110
-113832	73	2000	1196	2015	1120
-113833	73	2000	1196	2015	1130
-113769	73	2000	1196	2015	1140
-113717	73	2000	1196	2015	1150
-113641	73	2000	1196	2015	1160
-113620	73	2000	1196	2015	1170
-113684	73	2000	1196	2015	1180
-113834	73	2000	1196	2015	1200
-113685	73	2000	1196	2015	1190
 
 
