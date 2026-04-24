@@ -433,9 +433,79 @@ $(document).ready(function () {
         revalidateAllCap1196Inputs();
     }
 
+    setTimeout(setCap1196OnlyLastDynamicRowReadonly, 0);
+
     $(document).on(
         "change",
         "input:not([type='button']):not([readonly]):not([disabled])",
         f_Capitol_1196
     );
 });
+
+//Modifica - aceste celule sa fie readonly
+//<input query="true" type="text" onfocus="javascript: this.className ='focusI'" onblur="javascript: SearchRow(this.value, this.id); this.className = 'quest-input idleField'" id="T1_29" onkeydown="return tabOnEnter (this, event)" class="quest-input idleField">
+//pana la
+//<input type="text" query="false" style="" onfocus="javascript: this.className = 'focusI'" onblur="javascript: this.className = 'quest-input-numberbox idleField'" id="T10_29" onkeydown="return tabOnEnter (this, event)" onkeyup=" pd(this,-)" class="quest-input-numberbox idleField">
+function setCap1196OnlyLastDynamicRowReadonly() {
+    var selector = [
+        "input[id^='T1_']",
+        "input[id^='T3_']",
+        "input[id^='T4_']",
+        "input[id^='T5_']",
+        "input[id^='T6_']",
+        "input[id^='T7_']",
+        "input[id^='T8_']",
+        "input[id^='T9_']",
+        "input[id^='T10_']"
+    ].join(",");
+
+    var $dynamicRows = $("#Tab_Data tr").filter(function () {
+        return $(this).find("input[id^='T1_']").length > 0;
+    });
+
+    $dynamicRows.each(function () {
+        $(this).find(selector)
+            .prop("readonly", false)
+            .removeAttr("readonly")
+            .css({
+                backgroundColor: "",
+                cursor: ""
+            })
+            .off("keydown.cap1196readonly beforeinput.cap1196readonly paste.cap1196readonly drop.cap1196readonly");
+    });
+
+    var $lastRow = $dynamicRows.last();
+    if ($lastRow.length) {
+        $lastRow.find(selector)
+            .prop("readonly", true)
+            .attr("readonly", "readonly")
+            .css({
+                backgroundColor: "#f5f5f5",
+                cursor: "not-allowed"
+            })
+            .on("keydown.cap1196readonly beforeinput.cap1196readonly paste.cap1196readonly drop.cap1196readonly", function (e) {
+                e.preventDefault();
+                return false;
+            });
+    }
+}
+
+(function () {
+    var originalAddRow = window.addRow;
+    if (typeof originalAddRow === "function") {
+        window.addRow = function () {
+            var result = originalAddRow.apply(this, arguments);
+            setTimeout(setCap1196OnlyLastDynamicRowReadonly, 0);
+            return result;
+        };
+    }
+
+    var originalAddRow1 = window.addRow1;
+    if (typeof originalAddRow1 === "function") {
+        window.addRow1 = function () {
+            var result = originalAddRow1.apply(this, arguments);
+            setTimeout(setCap1196OnlyLastDynamicRowReadonly, 0);
+            return result;
+        };
+    }
+})();
