@@ -77,3 +77,36 @@ if (itemId == "78_100_113037_07_1" && isChecked == true) {    // 78_100_113037_0
 
 
 }
+
+
+
+//73 
+
+// CAP 100 - FORM 73
+// Se poate selecta doar o singură opțiune din cele 7 rânduri
+
+var cap100Options73 = [
+    "73_100_114151_1_1", // rând 1
+    "73_100_114152_2_1", // rând 2
+    "73_100_114153_3_1", // rând 3
+    "73_100_114154_4_1", // rând 4
+    "73_100_114155_5_1", // rând 5
+    "73_100_114157_6_1", // rând 6
+    "73_100_114156_7_1"  // rând 7
+];
+
+if (isChecked === true && cap100Options73.indexOf(itemId) !== -1) {
+    cap100Options73.forEach(function (id) {
+        if (id !== itemId) {
+            var el = document.getElementById(id);
+            if (el) {
+                el.checked = false;
+            }
+        }
+    });
+}
+
+//adauga 73_100_114158_ER_1 sa fie readonly - doar atat 
+
+
+40674950
