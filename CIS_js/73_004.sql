@@ -7,16 +7,18 @@ SELECT
             ' Cod CUIO - nu este completat - ' || D.COL1
 
         WHEN D.COL2 IS NULL 
-             OR LENGTH(TRIM(D.COL2)) < 13 
+             OR NOT REGEXP_LIKE(TRIM(D.COL2), '^[0-9]{13}$')
         THEN 
-            ' IDNO - nu este completat sau are mai putin de 13 caractere - ' || D.COL2
+            ' IDNO - trebuie sa contina exact 13 cifre - ' || D.COL2
             
-          
         WHEN D.COL33 IS NULL 
              OR LENGTH(TRIM(D.COL33)) < 4 
         THEN 
-            ' Denumirea entita?ilor economice  - nu este completat sau are mai putin de 4 caractere - ' || D.COL33  
-            
+            ' Denumirea entita?ilor economice - nu este completat sau are mai putin de 4 caractere - ' || D.COL33  
+
+        WHEN NOT REGEXP_LIKE(TRIM(D.COL33), '^[[:alpha:][:space:]]+$')
+        THEN 
+            ' Denumirea entita?ilor economice - sunt permise doar litere - ' || D.COL33
     END AS REZULTAT
 FROM VW_DATA_ALL D
 WHERE
@@ -24,11 +26,8 @@ WHERE
     AND D.CUIIO = :CUIIO
     AND (D.CUIIO_VERS = :CUIIO_VERS OR :CUIIO_VERS = -1)
     AND D.FORM = :FORM
-    AND D.FORM_VERS = :FORM_VERS AND 
-   (:CAPITOL=:CAPITOL            OR :CAPITOL <> :CAPITOL) AND
-   (:CAPITOL_VERS=:CAPITOL_VERS  OR :CAPITOL_VERS <> :CAPITOL_VERS) AND
-   (:ID_MD=:ID_MD               OR  :ID_MD <> :ID_MD) AND
-     D.FORM = 73
+    AND D.FORM_VERS = :FORM_VERS
+    AND D.FORM = 73
     AND D.CAPITOL = 1196
     AND (
         D.RIND LIKE '1000-%'
@@ -44,10 +43,9 @@ HAVING
     OR LENGTH(TRIM(D.COL1)) < 4 
    
     OR D.COL2 IS NULL  
-    OR LENGTH(TRIM(D.COL2)) < 13
+    OR NOT REGEXP_LIKE(TRIM(D.COL2), '^[0-9]{13}$')
     
     OR D.COL33 IS NULL  
     OR LENGTH(TRIM(D.COL33)) < 4
-    
-    -- for D.COL33 
-    --must add condition - if is entered numbers or other symbol - only letter is permitted entered
+
+    OR NOT REGEXP_LIKE(TRIM(D.COL33), '^[[:alpha:][:space:]]+$');

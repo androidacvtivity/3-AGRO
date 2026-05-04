@@ -1,0 +1,88 @@
+// Verified: only these exact CAP 1196 cells, column _5, allow up to 2 decimal digits
+(function () {
+    var cap1196TwoDecimalTargets = {
+        "73_1196_113831_1110_5": true,
+        "73_1196_113832_1120_5": true,
+        "73_1196_113833_1130_5": true,
+        "73_1196_113769_1140_5": true,
+        "73_1196_113717_1150_5": true,
+        "73_1196_113641_1160_5": true,
+        "73_1196_113620_1170_5": true,
+        "73_1196_113684_1180_5": true,
+        "73_1196_113685_1190_5": true,
+        "73_1196_113834_1200_5": true
+    };
+
+    function isCap1196TwoDecimalTarget(el) {
+        return !!(el && el.id && cap1196TwoDecimalTargets[el.id]);
+    }
+
+    function isAllowedTwoDecimalControlKey(e) {
+        var key = e.key;
+        return (
+            key === "Backspace" ||
+            key === "Delete" ||
+            key === "Tab" ||
+            key === "Escape" ||
+            key === "Enter" ||
+            key === "ArrowLeft" ||
+            key === "ArrowRight" ||
+            key === "ArrowUp" ||
+            key === "ArrowDown" ||
+            key === "Home" ||
+            key === "End"
+        );
+    }
+
+    function sanitizeTwoDecimalValue(value) {
+        value = String(value || "").replace(/,/g, ".");
+        value = value.replace(/[^0-9.]/g, "");
+
+        var parts = value.split(".");
+        var intPart = parts.shift() || "";
+        var decPart = parts.join("").slice(0, 2);
+
+        if (intPart === "" && decPart === "") {
+            return "";
+        }
+
+        return decPart.length ? intPart + "." + decPart : intPart;
+    }
+
+    $(document).on("keydown", "input", function (e) {
+        if (!isCap1196TwoDecimalTarget(this)) {
+            return;
+        }
+
+        if (e.ctrlKey || e.metaKey || e.altKey) {
+            return;
+        }
+
+        if (isAllowedTwoDecimalControlKey(e)) {
+            return;
+        }
+
+        if (/^[0-9]$/.test(e.key)) {
+            return;
+        }
+
+        if ((e.key === "." || e.key === ",") &&
+            this.value.indexOf(".") === -1 &&
+            this.value.indexOf(",") === -1) {
+            return;
+        }
+
+        e.preventDefault();
+    });
+
+    $(document).on("input blur paste", "input", function () {
+        if (!isCap1196TwoDecimalTarget(this)) {
+            return;
+        }
+
+        var cleaned = sanitizeTwoDecimalValue(this.value);
+        if (this.value !== cleaned) {
+            this.value = cleaned;
+        }
+    });
+})();

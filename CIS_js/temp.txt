@@ -1,0 +1,43 @@
+// You do the same for this chapter - this code - just
+//for rows 
+//
+// { id: "113831", rind: "1110" },
+// { id: "113832", rind: "1120" },
+// { id: "113833", rind: "1130" },
+// { id: "113769", rind: "1140" },
+// { id: "113717", rind: "1150" },
+// { id: "113641", rind: "1160" },
+// { id: "113620", rind: "1170" },
+// { id: "113684", rind: "1180" },
+// { id: "113685", rind: "1190" },
+// { id: "113834", rind: "1200" }
+
+// col _5 
+
+//to be able to enter with two digits after the decimal point
+
+And the autosum should be integers, everything - just - what I indicated - the entry in these cells should allow
+
+
+Once again - what needs to be done - in all rows - static and dynamic - it must be possible to enter only integer values ​​- only in the following static rows should it be allowed to enter decimal values ​​with 2 digits after the decimal point - I am sending you the initial code - and a code example for another chapter that you have already done
+
+Now we work for 1196
+
+
+Now not permitted entered decimal for all - but must permitted entered values for 
+
+this 
+73_1196_113831_1110_5
+73_1196_113832_1120_5
+73_1196_113833_1130_5
+73_1196_113769_1140_5
+73_1196_113717_1150_5
+73_1196_113641_1160_5
+73_1196_113620_1170_5
+73_1196_113684_1180_5
+73_1196_113685_1190_5
+73_1196_113834_1200_5
+
+Now not permitted entered decimal for all - but must permitted entered values for. Something not work 
+
+Again not work 
