@@ -1,0 +1,671 @@
+<table class="header-table">
+    <tr>
+        <td width="33%" valign="top">
+            <p><strong>Date de identificare/ </strong><em>Идентификационные данные</em></p>
+            <p>Denumirea/<em>Наименование</em>: @ENT_NAME;</p>
+            <p>&nbsp;</p>
+            <p>Adresa/<em>Адрес</em>:</p>
+            <p>Raionul (municipiul, UTA Găgăuzia)<br /><em>Район (муниципий, АТО Гагаузия)</em></p>
+            <p>&nbsp;</p>
+            <p>Satul (comuna), oraşul @CUATM;</p>
+            <p><em>Примэрия села (коммуны), города</em></p>
+            <p>&nbsp;</p>
+            <p>Cod CAEM: @CAEM;</p>
+            <p>&nbsp;</p>
+            <p>Strada/<em>Улица</em> @STREET;</p>
+            <p>&nbsp;</p>
+            <p>Cod CUIÎO @CUIIO;</p>
+            <p>&nbsp;</p>
+            <p>Cod IDNO @IDNO;</p>
+            <p>&nbsp;</p>
+            <p>Conducătorul <em>@TITLU_R7_C31;</em><br /><em>Руководитель (nume, prenume/имя, фамилия)</em></p>
+            <p>&nbsp;</p>
+            <p>Executantul @TITLU_R2_C31;<br /><em>Исполнитель (nume, prenume/имя, фамилия)</em></p>
+            <p>tel. @TITLU_R3_C31;</p>
+            <p>e-mail. @TITLU_R4_C31;</p>
+        </td>
+        <td width="33%" valign="top">
+            <p align="center">&nbsp;</p>
+            <p align="center">BIROUL NAŢIONAL DE STATISTICĂ</p>
+            <p align="center">&nbsp;</p>
+            <p align="center"><strong>Cercetare statistică anuală</strong></p>
+            <p align="center"><strong><em>Статистическое обследование годовое</em></strong></p>
+            <p align="center">&nbsp;</p>
+            <p align="center"><strong>Nr. 3-AGR</strong></p>
+            <p align="center">&nbsp;</p>
+            <p align="center">
+                <strong>Informaţia privind utilizatorii de terenuri agricole, deținătorii de bazine acvatice destinate
+                    captării peștelui conform stării la 1 mai în anul @YEAR;</strong>
+            </p>
+            <p align="center">
+                <em>Информация о пользователях сельскохозяйственных угодий, владельцах держателей водоемов,
+                    предназначенные для вылова рыбы по состоянию на 1 мая за год</em>
+            </p>
+            <p align="center">@NalogPeriodType;@NalogPeriodLetter;</p>
+        </td>
+        <td width="33%" valign="top">
+            <p>În conformitate cu Legea Republicii Moldova nr. 93 din 26.05.2017 «Cu privire la statistica oficială»,
+                producătorii de statistici oficiale:<br />
+                - au dreptul să obțină și să colecteze datele necesare producerii de informație statistică de la toate
+                persoanele fizice și juridice (art.13);<br />
+                - asigură protecţia datelor confidenţiale şi neadmiterea divulgării acestora (art.19).<br />
+                Neprezentarea la timp a datelor statistice, prezentarea de date eronate sau în volum incomplet
+                constituie contravenţie şi se sancţionează conform art.330 al Codului contravențional al Republicii
+                Moldova.
+            </p>
+            <p>&nbsp;</p>
+            <p>Aprobat prin Ordinul Biroului Naţional de Statistică nr.164 din 30.12.2025</p>
+            <p>&nbsp;</p>
+            <p>Acest chestionar poate fi completat on-line pe portalul https://raportare.gov.md/ sau prezentat pe suport
+                de hârtie în adresa organului teritorial pentru statistică până la data de 17 mai de către primăriile
+                oraşelor (muncipiilor), satelor (comunelor).</p>
+        </td>
+    </tr>
+</table>
+
+<br />
+
+<!-- ===== CAP. 1 ===== -->
+<h3>Cap.1 - Informaţia privind utilizatorii de terenuri agricole</h3>
+<!-- TABLE 1a -->
+<div id="CAP1">
+    <table id="tab_cap1">
+        <colgroup>
+            <col style="width:6%">
+            <col style="width:34%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th align="center" rowspan="2">Nr. rând</th>
+                <th align="center" rowspan="2">Denumirea categoriilor de producători agricoli</th>
+                <th align="center" rowspan="2">Cod CUIIO</th>
+                <th align="center" rowspan="2">Cod IDNO</th>
+                <th align="center" rowspan="2">Denumirea entităților economice</th>
+                <th align="center" rowspan="2">Numărul entităților economice</th>
+                <th align="center" rowspan="2">Total suprafața terenurilor agricole în folosință</th>
+                <th align="center" colspan="4">din care:</th>
+                <!-- <th align="center" style="width:50px">✖</th> -->
+            </tr>
+            <tr>
+                <th>Teren arabil</th>
+                <th>Livezi, arbuști fructiferi și nuciferi</th>
+                <th>Vii</th>
+
+            </tr>
+            <tr>
+                <th align="center">A</th>
+                <th align="center">B</th>
+                <th align="center">C</th>
+                <th align="center">D</th>
+                <th align="center">E</th>
+                <th align="center">1</th>
+                <th align="center">2</th>
+                <th align="center">3</th>
+                <th align="center">4</th>
+                <th align="center">5</th>
+                <a href="#" class="grid-addrow">Adaugă rând</a>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center">1000</td>
+                <td>Exploatații agricole cu personalitate juridică – total, din care:</td>
+                <td align="center">✖</td>
+                <td align="center">✖</td>
+                <td align="center">✖</td>
+                <td>@CAP1_R1000_C1;</td>
+                <td>@CAP1_R1000_C2;</td>
+                <td>@CAP1_R1000_C3;</td>
+                <td>@CAP1_R1000_C4;</td>
+                <td>@CAP1_R1000_C5;</td>
+
+            </tr>
+            <tr class="drow">
+                <td>@CAP1_R_CA;</td>
+                <!-- <td>@CAP1_R_CB;</td> -->
+                <td align="center">✖</td>
+                <td>@CAP1_R_CC;</td>
+                <td>@CAP1_R_CD;</td>
+                <td>@CAP1_R_CE;</td>
+                <td>@CAP1_R_C1;</td>
+                <td>@CAP1_R_C2;</td>
+                <td>@CAP1_R_C3;</td>
+                <td>@CAP1_R_C4;</td>
+                <td>@CAP1_R_C5;</td>
+                <td width="20" class="delrow"><a href="#">Șterge</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- TABLE 1b -->
+<table>
+    <colgroup>
+        <col style="width:6%">
+        <col style="width:34%">
+        <col style="width:6%">
+        <col style="width:6%">
+        <col style="width:6%">
+        <col style="width:6%">
+        <col style="width:6%">
+        <col style="width:6%">
+        <col style="width:6%">
+        <col style="width:6%">
+        <col style="width:6%">
+    </colgroup>
+    <tbody>
+        <tr>
+            <td align="center">1100</td>
+            <td>Gospodării țărănești (de fermier) cu suprafața terenurilor agricole până la 10 ha – total, din care:*
+            </td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">@CAP1_R1100_C1;</td>
+            <td align="center">@CAP1_R1100_C2;</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+        </tr>
+        <tr>
+            <td align="center">1110</td>
+            <td>– până la 1 ha</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td>@CAP1_R1110_C1;</td>
+            <td>@CAP1_R1110_C2;</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+        </tr>
+        <tr>
+            <td align="center">1120</td>
+            <td>– de la 1 ha până la 2 ha</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td>@CAP1_R1120_C1;</td>
+            <td>@CAP1_R1120_C2;</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+        </tr>
+        <tr>
+            <td align="center">1130</td>
+            <td>– de la 2 ha până la 3 ha</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td>@CAP1_R1130_C1;</td>
+            <td>@CAP1_R1130_C2;</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+        </tr>
+        <tr>
+            <td align="center">1140</td>
+            <td>– de la 3 ha până la 4 ha</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td>@CAP1_R1140_C1;</td>
+            <td>@CAP1_R1140_C2;</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+        </tr>
+        <tr>
+            <td align="center">1150</td>
+            <td>– de la 4 ha până la 5 ha</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td>@CAP1_R1150_C1;</td>
+            <td>@CAP1_R1150_C2;</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+        </tr>
+        <tr>
+            <td align="center">1160</td>
+            <td>– de la 5 ha până la 6 ha</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td>@CAP1_R1160_C1;</td>
+            <td>@CAP1_R1160_C2;</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+        </tr>
+        <tr>
+            <td align="center">1170</td>
+            <td>– de la 6 ha până la 7 ha</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td>@CAP1_R1170_C1;</td>
+            <td>@CAP1_R1170_C2;</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+        </tr>
+        <tr>
+            <td align="center">1180</td>
+            <td>– de la 7 ha până la 8 ha</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td>@CAP1_R1180_C1;</td>
+            <td>@CAP1_R1180_C2;</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+        </tr>
+        <tr>
+            <td align="center">1190</td>
+            <td>– de la 8 ha până la 9 ha</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td>@CAP1_R1190_C1;</td>
+            <td>@CAP1_R1190_C2;</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+        </tr>
+        <tr>
+            <td align="center">1200</td>
+            <td>– de la 9 ha până la 10 ha</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td>@CAP1_R1200_C1;</td>
+            <td>@CAP1_R1200_C2;</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- TABLE 1c -->
+<div id="CAP12">
+    <table id="tab_cap12">
+        <colgroup>
+            <col style="width:6%">
+            <col style="width:34%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+        </colgroup>
+        <tbody>
+            <tr>
+                <td align="center">1300</td>
+                <td>Gospodării țărănești (de fermier) cu suprafața terenurilor agricole de 10 ha și peste – total, din
+                    care:</td>
+                <td align="center">✖</td>
+                <td align="center">✖</td>
+                <td align="center">✖</td>
+                <td>@CAP1_R1300_C1;</td>
+                <td>@CAP1_R1300_C2;</td>
+                <td>@CAP1_R1300_C3;</td>
+                <td>@CAP1_R1300_C4;</td>
+                <td>@CAP1_R1300_C5;</td>
+                <a href="#" class="grid-addrow">Adaugă rând</a>
+            </tr>
+            <tr class="drow">
+                <td>@CAP12_R_CA;</td>
+                <!-- <td>@CAP12_R_CB;</td> -->
+                <td align="center">✖</td>
+                <td>@CAP12_R_CC;</td>
+                <td>@CAP12_R_CD;</td>
+                <td>@CAP12_R_CE;</td>
+                <td>@CAP12_R_C1;</td>
+                <td>@CAP12_R_C2;</td>
+                <td>@CAP12_R_C3;</td>
+                <td>@CAP12_R_C4;</td>
+                <td>@CAP12_R_C5;</td>
+                <td width="20" class="delrow"><a href="#">Șterge</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- TABLE 1d -->
+<table>
+    <colgroup>
+        <col style="width:6%">
+        <col style="width:34%">
+        <col style="width:6%">
+        <col style="width:6%">
+        <col style="width:6%">
+        <col style="width:6%">
+        <col style="width:6%">
+        <col style="width:6%">
+        <col style="width:6%">
+        <col style="width:6%">
+        <col style="width:6%">
+    </colgroup>
+    <tbody>
+        <tr>
+            <td align="center">1400</td>
+            <td>Persoane care au primit în natură sectoare în contul cotelor de teren echivalent, le prelucrează
+                individual și n-au înregistrat gospodăria – total</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td>@CAP1_R1400_C1;</td>
+            <td>@CAP1_R1400_C2;</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+        </tr>
+        <tr>
+            <td align="center">1500</td>
+            <td>Terenurile gospodăriilor populației (loturi pe lângă case și grădini)</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td>@CAP1_R1500_C2;</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+        </tr>
+        <tr>
+            <td align="center">1600</td>
+            <td>Terenurile întovărășirilor pomicole, loturile pomicole</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td>@CAP1_R1600_C2;</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+        </tr>
+        <tr>
+            <td align="center">1700</td>
+            <td>Pășuni și fânețe naturale</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td>@CAP1_R1700_C2;</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+        </tr>
+        <tr>
+            <td align="center">1800</td>
+            <td>Terenuri agricole proprietate publică a UAT, terenuri anterior încadrate la fondul de rezervă, excluzând
+                terenurile transmise în arendă/posesie deţinătorilor indicaţi în rândurile 1000–1700</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td>@CAP1_R1800_C2;</td>
+            <td>@CAP1_R1800_C3;</td>
+            <td>@CAP1_R1800_C4;</td>
+            <td>@CAP1_R1800_C5;</td>
+        </tr>
+        <tr>
+            <td align="center">1900</td>
+            <td>Terenuri agricole în folosință – total (rd.1000+rd.1100+rd.1300+rd.1400+rd.1500+rd.1600+rd.1700+rd.1800)
+            </td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td>@CAP1_R1900_C2;</td>
+            <td>@CAP1_R1900_C3;</td>
+            <td>@CAP1_R1900_C4;</td>
+            <td>@CAP1_R1900_C5;</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<br />
+
+<!-- ===== CAP. 2 ===== -->
+<h3>Cap.2 - Informaţia privind deţinătorii de bazine acvatice destinate captării peştelui</h3>
+
+<!-- TABLE 2a: row 2000, then empty last row -->
+<div id="CAP2">
+    <table id="tab_cap2">
+        <colgroup>
+            <col style="width:6%">
+            <col style="width:34%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+        </colgroup>
+        <thead>
+            <tr align="center">
+                <th rowspan="3">Nr. rând</th>
+                <th rowspan="3">Denumirea categoriilor de producători agricoli</th>
+                <th rowspan="3">Cod CUIÎO</th>
+                <th rowspan="3">Cod IDNO</th>
+                <th rowspan="3">Denumirea entităţilor economice</th>
+                <th rowspan="3">Numărul entităţilor economice</th>
+                <th colspan="4">din care:</th>
+            </tr <tr align="center">
+            <th colspan="2">În proprietate</th>
+            <th colspan="2">În arendă</th>
+            </tr>
+            <tr align="center">
+                <th>Numărul bazinelor acvatice</th>
+                <th>Suprafaţa bazinelor acvatice (m<sup>2</sup>)</th>
+                <th>Numărul bazinelor acvatice</th>
+                <th>Suprafaţa bazinelor acvatice (m<sup>2</sup>)</th>
+                <a href="#" class="grid-addrow">Adaugă rând</a>
+            </tr>
+            <tr align="center">
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+                <td>D</td>
+                <td>E</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center">2000</td>
+                <td>Exploatații agricole cu personalitate juridică care deţin bazine acvatice destinate captării
+                    peştelui – total, <u>din care:</u></td>
+                <td align="center">✖</td>
+                <td align="center">✖</td>
+                <td align="center">✖</td>
+                <td>@CAP2_R2000_C1;</td>
+                <td>@CAP2_R2000_C2;</td>
+                <td>@CAP2_R2000_C3;</td>
+                <td>@CAP2_R2000_C4;</td>
+                <td>@CAP2_R2000_C5;</td>
+            </tr>
+            <!-- Empty row WITH borders = last row of this sub-table -->
+            <tr class="drow">
+                <td>@CAP2_R_CA;</td>
+                <!-- <td>@CAP2_R_CB;</td> -->
+                <td align="center">✖</td>
+                <td>@CAP2_R_CC;</td>
+                <td>@CAP2_R_CD;</td>
+                <td>@CAP2_R_CE;</td>
+                <td>@CAP2_R_C1;</td>
+                <td>@CAP2_R_C2;</td>
+                <td>@CAP2_R_C3;</td>
+                <td>@CAP2_R_C4;</td>
+                <td>@CAP2_R_C5;</td>
+                <td width="20" class="delrow"><a href="#">Șterge</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="CAP21">
+    <!-- TABLE 2b: row 2100, then empty last row -->
+    <table id="tab_cap21">
+        <colgroup>
+            <col style="width:6%">
+            <col style="width:34%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+        </colgroup>
+        <tbody>
+            <tr>
+                <td align="center">2100</td>
+                <td>Gospodăriile ţărăneşti (de fermier) care deţin bazine acvatice destinate captării peştelui – total,
+                    <u>din care:</u></td>
+                <td align="center">✖</td>
+                <td align="center">✖</td>
+                <td align="center">✖</td>
+                <td>@CAP2_R2100_C1;</td>
+                <td>@CAP2_R2100_C2;</td>
+                <td>@CAP2_R2100_C3;</td>
+                <td>@CAP2_R2100_C4;</td>
+                <td>@CAP2_R2100_C5;</td>
+                <a href="#" class="grid-addrow">Adaugă rând</a>
+            </tr>
+            <!-- Empty row WITH borders = last row of this sub-table -->
+            <tr class="drow">
+                <td>@CAP21_R_CA;</td>
+                <!-- <td>@CAP21_R_CB;</td> -->
+                <td align="center">✖</td>
+                <td>@CAP21_R_CC;</td>
+                <td>@CAP21_R_CD;</td>
+                <td>@CAP21_R_CE;</td>
+                <td>@CAP21_R_C1;</td>
+                <td>@CAP21_R_C2;</td>
+                <td>@CAP21_R_C3;</td>
+                <td>@CAP21_R_C4;</td>
+                <td>@CAP21_R_C5;</td>
+                <td width="20" class="delrow"><a href="#">Șterge</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div id="CAP22">
+    <!-- TABLE 2c: rows 2200–2300 -->
+    <table id="tab_cap22">
+        <colgroup>
+            <col style="width:6%">
+            <col style="width:34%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+        </colgroup>
+        <tbody>
+            <tr>
+                <td align="center">2200</td>
+                <td>Persoane fizice - deţinătorii de bazine acvatice destinate captării peştelui – total, <u>din
+                        care:</u></td>
+                <td align="center">✖</td>
+                <td align="center">✖</td>
+                <td align="center">✖</td>
+                <td>@CAP2_R2200_C1;</td>
+                <td>@CAP2_R2200_C2;</td>
+                <td>@CAP2_R2200_C3;</td>
+                <td>@CAP2_R2200_C4;</td>
+                <td>@CAP2_R2200_C5;</td>
+                <a href="#" class="grid-addrow">Adaugă rând</a>
+            </tr>
+            <!-- Empty row WITH borders = last row of this sub-table -->
+            <tr class="drow">
+                <td>@CAP22_R_CA;</td>
+                <!-- <td>@CAP22_R_CB;</td> -->
+                <td align="center">✖</td>
+                <td>@CAP22_R_CC;</td>
+                <td>@CAP22_R_CD;</td>
+                <td>@CAP22_R_CE;</td>
+                <td>@CAP22_R_C1;</td>
+                <td>@CAP22_R_C2;</td>
+                <td>@CAP22_R_C3;</td>
+                <td>@CAP22_R_C4;</td>
+                <td>@CAP22_R_C5;</td>
+                <td width="20" class="delrow"><a href="#">Șterge</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- TABLE 2d: row 2300 (total) -->
+    <table>
+        <colgroup>
+            <col style="width:6%">
+            <col style="width:34%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+            <col style="width:6%">
+        </colgroup>
+        <tbody>
+            <tr>
+                <td align="center">2300</td>
+                <td>Deţinătorii de bazine acvatice destinate captării peştelui – total (rd.2000+rd.2100+rd.2200)</td>
+                <td align="center">✖</td>
+                <td align="center">✖</td>
+                <td align="center">✖</td>
+                <td>@CAP2_R2300_C1;</td>
+                <td>@CAP2_R2300_C2;</td>
+                <td>@CAP2_R2300_C3;</td>
+                <td>@CAP2_R2300_C4;</td>
+                <td>@CAP2_R2300_C5;</td>
+            </tr>
+        </tbody>
+        <tr>
+            <td align="center">999</td>
+            <td align="center">Timpul utilizat pentru completarea formularului trebuie să fie îndeplinit (în minute)
+            </td>
+            <td>@CAP2_R999_C1;</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+            <td align="center">✖</td>
+        </tr>
+    </table>
+</div>
